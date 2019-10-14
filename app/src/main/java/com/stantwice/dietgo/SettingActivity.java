@@ -5,39 +5,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class SettingActivity extends AppCompatActivity {
 
-    Button backBtn,saveBtn;
+    @OnClick(R.id.back_button)
+    public void toSetting() {
+        startActivity(new Intent(this, MainActivity.class));
+    }
+    @OnClick(R.id.save_button)
+    public void toWeight() {
+        startActivity(new Intent(this, MainActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-
-        init();
-    }
-
-    void init(){
-        backBtn = findViewById(R.id.back_button);
-        saveBtn = findViewById(R.id.save_button);
-
-
-        sendOnClick(backBtn, new Intent(SettingActivity.this, MainActivity.class));
-        sendOnClick(saveBtn, new Intent(SettingActivity.this, MainActivity.class));
-
-
-    }
-
-    void sendOnClick(View v, final Intent a){
-
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(a);
-                finish();
-            }
-        });
-
+        ButterKnife.bind(this);
     }
 }
