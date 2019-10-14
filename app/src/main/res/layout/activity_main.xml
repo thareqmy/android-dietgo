@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="217dp"
+        android:layout_height="435dp"
+        android:layout_marginBottom="36dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/snap_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/character" />
+
+    <Button
+        android:id="@+id/snap_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/pict"
+        android:shadowColor="#00DFDFDF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/avatar"
+        app:layout_constraintStart_toStartOf="@+id/avatar" />
+
+    <Button
+        android:id="@+id/setting_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/statistics_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/statistic"
+        app:layout_constraintStart_toStartOf="@+id/setting_button"
+        app:layout_constraintTop_toBottomOf="@+id/setting_button" />
+
+    <Button
+        android:id="@+id/report_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/report"
+        app:layout_constraintStart_toStartOf="@+id/statistics_button"
+        app:layout_constraintTop_toBottomOf="@+id/statistics_button" />
+
+    <Button
+        android:id="@+id/weight_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/weight"
+        app:layout_constraintStart_toStartOf="@+id/report_button"
+        app:layout_constraintTop_toBottomOf="@+id/report_button" />
+
+    <Button
+        android:id="@+id/shop_button"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shop"
+        app:layout_constraintStart_toStartOf="@+id/weight_button"
+        app:layout_constraintTop_toBottomOf="@+id/weight_button" />
+
+    <ImageView
+        android:id="@+id/coin_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/coins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/coin_image"
+        app:layout_constraintStart_toStartOf="@+id/coin_image"
+        app:layout_constraintTop_toBottomOf="@+id/coin_image" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Feed Me"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/snap_button"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/snap_button"
+        app:layout_constraintTop_toBottomOf="@+id/snap_button" />
+
+    <TextView
+        android:id="@+id/coint_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="150"
+        android:textColor="#00B72B"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/coin_image"
+        app:layout_constraintTop_toTopOf="@+id/coin_image" />
+</android.support.constraint.ConstraintLayout>
