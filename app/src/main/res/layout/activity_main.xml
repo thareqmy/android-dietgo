@@ -12,11 +12,24 @@
         android:layout_width="217dp"
         android:layout_height="435dp"
         android:layout_marginBottom="36dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/snap_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/character" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/regPageLogo"
+        android:layout_width="170dp"
+        android:layout_height="435dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chargif"
+        app:layout_constraintBottom_toTopOf="@+id/snap_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/snap_button"
