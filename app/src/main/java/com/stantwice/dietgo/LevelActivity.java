@@ -1,5 +1,6 @@
 package com.stantwice.dietgo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,13 @@ public class LevelActivity extends AppCompatActivity {
         left = findViewById(R.id.left_btn);
         right = findViewById(R.id.right_btn);
         characterView = findViewById(R.id.character_image);
+
+        findViewById(R.id.start_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LevelActivity.this, MainActivity.class));
+            }
+        });
 
         left.setOnClickListener(new View.OnClickListener() {
             @Override

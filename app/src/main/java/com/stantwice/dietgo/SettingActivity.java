@@ -31,6 +31,8 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+        ButterKnife.bind(this);
+
         left = findViewById(R.id.left_btn);
         right = findViewById(R.id.right_btn);
         characterView = findViewById(R.id.character_image);

@@ -124,6 +124,8 @@ public class ResultActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
+                Log.d("HAHAHA", "YEA");
+
 
                 image_uri = result.getUri();
                 // TODO add pay service implementation
@@ -166,13 +168,12 @@ public class ResultActivity extends AppCompatActivity {
                     @NonNull Response<PredictResponse> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         Log.d("upload payment", "sukses");
-                        Log.d("upload payment", response.body().getPredict().toString());
-                        result1.setText(response.body().getPredict());
-                        result2.setText(response.body().getPredict());
-                        result3.setText(response.body().getPredict());
-                        calorie1.setText(response.body().getPredict());
-                        calorie2.setText(response.body().getPredict());
-                        calorie3.setText(response.body().getPredict());
+                        result1.setText(response.body().getPredict1());
+                        result2.setText(response.body().getPredict2());
+                        result3.setText(response.body().getPredict3());
+                        calorie1.setText(response.body().getCal1());
+                        calorie2.setText(response.body().getCal2());
+                        calorie3.setText(response.body().getCal3());
 
                     } else {
                         if (!response.isSuccessful()){
