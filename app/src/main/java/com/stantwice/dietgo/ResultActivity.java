@@ -15,6 +15,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -76,6 +77,36 @@ public class ResultActivity extends AppCompatActivity {
 
 
         openImagePicker();
+        result1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                        startActivity(new Intent(ResultActivity.this, MainActivity.class));
+                        finish();
+
+            }
+        });
+
+        result2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(ResultActivity.this, MainActivity.class));
+                finish();
+
+            }
+        });
+
+        result3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(ResultActivity.this, MainActivity.class));
+                finish();
+
+            }
+        });
+
 
 
         //takePicture();
